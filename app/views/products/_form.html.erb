@@ -1,0 +1,19 @@
+<%=form_for @product do |f| %>
+
+<span>Product name</span>
+<%= f.text_field :product_name, :required => true %>
+<br>
+    <span>Product description</span>
+    <%= f.text_area :product_desc1, :required => true %>
+<br>
+    <span>Product description_2</span>
+    <%= f.text_area :product_desc2, :required => true %>
+<br
+    <span>Price</span>
+    <%= f.number_field :price, :required => true %>
+<br>
+        <span>Image</span>
+    <%= f.text_field :image %>
+<br>
+        <%= f.submit "Submit", :class=> "submit_format"%>
+        <% end %>

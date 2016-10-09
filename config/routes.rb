@@ -1,4 +1,36 @@
 Rails.application.routes.draw do
+  get 'donations/index'
+
+  get 'donations/new'
+
+  get 'donations/edit'
+
+  get 'donations/show'
+
+  get 'pages/index'
+
+  root 'pages#index'
+
+  resources :products, :orders, :users
+
+  # get 'orders/index'
+  #
+  # get 'orders/new'
+  #
+  # get 'orders/edit'
+  #
+  # get 'orders/show'
+  #
+  # get 'carts/show'
+  #
+  # get 'products/index'
+  #
+  # get 'products/new'
+  #
+  # get 'products/edit'
+  #
+  # get 'products/show'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -14,3 +14,21 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).on("turbolinks:load", function() {
+  $('.autoplay').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    variableWidth: true,
+    autoplay: true,
+    autoplaySpeed: 3000
+
+  });
+
+  // $('.single-item-rtl').slick({
+  //   rtl: true
+  // });
+  //
+  $('.slick-prev').html('<');
+       $('.slick-next').html('>');
+});

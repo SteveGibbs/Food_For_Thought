@@ -1,0 +1,22 @@
+<h1>Products#index</h1>
+<p>Find me in app/views/products/index.html.erb</p>
+<div class="case1">
+<% @products.each do |item| %>
+
+<%= link_to image_tag(item.image), product_path(item) %>
+<br>
+<br>
+<%= item.product_name %>
+<br>
+<br>
+<%= item.product_desc1 %>
+<br>
+<br>
+<%= item.price %>
+<br>
+<br>
+
+<%end%>
+
+</div>
+<%= will_paginate @products %>

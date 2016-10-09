@@ -1,0 +1,18 @@
+<h1>Products#show</h1>
+<p>Find me in app/views/products/show.html.erb</p>
+
+<%=@product.product_name%>
+<br>
+<br>
+<%= image_tag(@product.image)%>
+<br>
+<br>
+<%=@product.product_desc1%>
+<%=@product.product_desc2%>
+<br>
+<br>
+<%=number_to_currency(@product.price)%>
+
+
+<%= link_to("Edit", edit_product_path(@product)) %>
+<%= link_to("Delete", product_path(@product),method: :delete, data: {confirm: "Are you sure?"}) %>

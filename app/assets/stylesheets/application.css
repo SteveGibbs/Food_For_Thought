@@ -210,7 +210,22 @@ margin: auto;
 display: inline-block;
 }
 
-input {
+.case2{
+   text-align: center;
+}
+
+.case3{
+   width: 60px;
+   background-color: #e3a797;
+}
+
+.case4{
+   width: 250px;
+   font-size: 12px;
+   text-align: left;
+
+}
+input, textarea {
    border-radius: 6px;
    text-align: center;
    width: 300px;
@@ -223,4 +238,13 @@ span {
 
 p, li {
    list-style-type: none;
+}
+
+a {
+  color: #A5A5A5;
+  padding: 30px;
+  text-align: justify;
+}
+a:hover {
+  color: #e3a797;
 }

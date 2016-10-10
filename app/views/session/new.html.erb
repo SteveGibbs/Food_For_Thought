@@ -1,0 +1,16 @@
+<h1>Session New</h1>
+
+<%= form_tag login_path, :class => "login_form" do %>
+<p>
+    <br>
+    <br>
+    <%= label_tag :email %>
+    <%= email_field_tag :email, "", :required => true %>
+</p>
+<p>
+    <%= label_tag :password %>
+    <%= password_field_tag :password, "", :required => true %>
+</p>
+
+<%= submit_tag "Login", :class => "submit_format" %>
+<% end %>

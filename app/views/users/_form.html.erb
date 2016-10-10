@@ -1,0 +1,79 @@
+<h1>Profile</h1>
+
+<%=form_for @user do |f| %>
+<div class="row">
+<div class="col-3 left">
+<span>First name</span>
+</div>
+<div class="col-9 left" >
+<%= f.text_field :first_name, :required => true %>
+</div>
+</div>
+<div class="row">
+<div class="col-3 left">
+    <span>Surname</span>
+    </div>
+    <div class="col-9 left" >
+    <%= f.text_field :last_name, :required => true %>
+</div>
+</div>
+<div class="row">
+<div class="col-3 left">
+    <span>Email</span>
+    </div>
+    <div class="col-9 left" >
+<%= f.email_field :email, :required => true %>
+</div>
+</div>
+<div class="row">
+<div class="col-3 left">
+    <span>Address Line 1</span>
+    </div>
+    <div class="col-9 left" >
+<%= f.text_field :address1, :required => true %>
+</div>
+</div>
+<div class="row">
+<div class="col-3 left">
+    <span>Address Line 2</span>
+    </div>
+    <div class="col-9 left" >
+<%= f.text_field :address2, :required => true %>
+</div>
+</div>
+<div class="row">
+<div class="col-3 left">
+    <span>Postcode</span>
+    </div>
+    <div class="col-9 left" >
+<%= f.number_field :postcode, :required => true %>
+</div>
+</div>
+<div class="row">
+<div class="col-3 left">
+    <span>State</span>
+    </div>
+    <div class="col-9 left" >
+<%= f.text_field :state %>
+</div>
+</div>
+<div class="row">
+<div class="col-3 left">
+    <span>Password</span>
+    </div>
+    <div class="col-9 left" >
+<%= f.password_field :password, :required => true%>
+</div>
+</div>
+<div class="row">
+<div class="col-3 left">
+    <span>Password Confirmation</span>
+    </div>
+    <div class="col-9 left" >
+<%= f.password_field :password_confirmation, :required => true%>
+</div>
+</div>
+
+<br>
+        <%= f.submit "Submit", :class=> "submit_format"%>
+        <% end %>

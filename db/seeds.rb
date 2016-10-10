@@ -6,6 +6,16 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+Donation.destroy_all
+d1 = Donation.create donation_name: 'mixed food', quantity: 10, donation_desc1: 'A mixed combination of fresh fruit and vegetables, meat and seafood, and canned items', image: 'donut-tshirt.jpg'
+
+d2 = Donation.create donation_name: 'mixed food', quantity: 20, donation_desc1: 'A mixed combination of fresh fruit and vegetables, meat and seafood, and canned items', image: 'donut-tshirt.jpg'
+
+d3 = Donation.create donation_name: 'mixed food', quantity: 40, donation_desc1: 'A mixed combination of fresh fruit and vegetables, meat and seafood, and canned items', image: 'donut-tshirt.jpg'
+
+d4 = Donation.create donation_name: 'mixed food', quantity: 60, donation_desc1: 'A mixed combination of fresh fruit and vegetables, meat and seafood, and canned items', image: 'donut-tshirt.jpg'
+
+
 Product.destroy_all
 p1 = Product.create product_name: 'custom tshirt', price: 39, product_desc1: 'Supporting Food for Thought - a custom tee on responsibly made organic cotton', image: 'donut-tshirt.jpg'
 p2 = Product.create product_name: 'custom tshirt', price: 29, product_desc1: 'Supporting Food for Thought - a custom tee on responsibly made organic cotton', image: 'donut-tshirt.jpg'

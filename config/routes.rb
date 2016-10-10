@@ -1,17 +1,21 @@
 Rails.application.routes.draw do
-  get 'donations/index'
-
-  get 'donations/new'
-
-  get 'donations/edit'
-
-  get 'donations/show'
-
+  # get 'donations/index'
+  #
+  # get 'donations/new'
+  #
+  # get 'donations/edit'
+  #
+  # get 'donations/show'
+  #
   get 'pages/index'
 
   root 'pages#index'
 
-  resources :products, :orders, :users
+  resources :products, :orders, :users, :donations
+
+  get '/login' => 'session#new', :as => "login"
+  post '/login' =>'session#create'
+  delete '/logout' => 'session#destroy', :as => "logout"
 
   # get 'orders/index'
   #

@@ -201,8 +201,26 @@ height: 160px;
 }
 
 .case1 {
+
 text-align: center;
 max-width: 360px;
+padding: 20px;
+max-height: 300px;
 margin: auto;
 display: inline-block;
+}
+
+input {
+   border-radius: 6px;
+   text-align: center;
+   width: 300px;
+
+}
+
+span {
+   text-align: center;
+}
+
+p, li {
+   list-style-type: none;
 }

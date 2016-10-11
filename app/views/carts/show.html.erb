@@ -14,13 +14,20 @@
       <li>Product ID: <%= item.product_id %></li>
       <!-- <li>Cart ID: <%#= item.cart_id %></li> -->
       <li>Order ID: <%= item.order_id %></li>
+      <li>Historical Price <%=item.historical_price %></li>
+      <li>Historical Quantity <%=item.historical_quantity %></li>
+
       <br>
       </div>
         <% end %>
 
         <%= link_to "Empty cart", cart_path(@cart), method: :delete, data: {confirm: "Are you sure you want to empty your cart?"} %>
 
-
+      <%= link_to "Checkout", new_order_path %>
 
 
         <% end %>
+
+
+        <p>Subtotal:
+            <%= number_to_currency(@cart.subtotal) %></p>

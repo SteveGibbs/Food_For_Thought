@@ -1,0 +1,55 @@
+
+
+
+
+
+
+
+
+
+
+<%=form_for @product do |f| %>
+
+<div class="row">
+<div class="col-3 left">
+<span>Product name</span>
+</div>
+<div class="col-9 left" >
+<%= f.text_field :product_name, :required => true %>
+</div>
+</div>
+<div class="row">
+<div class="col-3 left">
+    <span>Product description</span>
+</div>
+<div class="col-9 left" >
+<%= f.text_area :product_desc1, :required => true %>
+</div>
+</div>
+<div class="row">
+<div class="col-3 left">
+    <span>Product description 2</span>
+</div>
+<div class="col-9 left" >
+<%= f.text_area :product_desc2, :required => true %>
+</div>
+</div>
+<div class="row">
+<div class="col-3 left">
+    <span>Price</span>
+</div>
+<div class="col-9 left" >
+<%= f.text_area :price, :required => true %>
+</div>
+</div>
+<div class="row">
+<div class="col-3 left">
+    <span>Image</span>
+</div>
+<div class="col-9 left" >
+<%= f.text_area :image, :required => true %>
+</div>
+</div>
+
+        <%= f.submit "Submit", :class=> "submit_format"%>
+        <% end %>

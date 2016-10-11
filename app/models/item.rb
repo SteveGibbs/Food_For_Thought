@@ -18,4 +18,14 @@ class Item < ActiveRecord::Base
   belongs_to :cart
   belongs_to :order
 
+
+  def subtotal
+      self.product.price * self.quantity
+    end
+
+  # def archive
+  #   historical_price = self.product.price
+  # end
+
+
 end

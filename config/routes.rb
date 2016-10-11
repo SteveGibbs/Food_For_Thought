@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   root 'pages#index'
 
-  resources :products, :orders, :users, :donations
+  post 'donations' => 'donations#create', as: 'donate' #new code 11 Oct 12:42pm
 
   get '/login' => 'session#new', :as => "login"
   post '/login' =>'session#create'
@@ -23,6 +23,8 @@ Rails.application.routes.draw do
   post 'items' => 'items#create'
   get 'items/:id' => 'items#show', as: 'item'
   delete 'items/:id' => 'items#destroy', as: 'item_delete'
+
+  resources :products, :orders, :users, :donations, :food_orders
 
   # get 'orders/index'
   #

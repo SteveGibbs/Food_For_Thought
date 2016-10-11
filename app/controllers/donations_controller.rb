@@ -10,6 +10,8 @@ class DonationsController < ApplicationController
 
   def create
     @donation = Donation.create(donation_params)
+    @user = @current_user # test code
+    @user.donations << @donation # test code
     redirect_to donations_path
   end
 

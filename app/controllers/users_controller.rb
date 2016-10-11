@@ -24,6 +24,10 @@ class UsersController < ApplicationController
         flash[:error] = 'Please try again'
         render :new
       end
+
+      # @donation = Donation.find(params[:id])
+      # @user = @current_user # test code
+      # @user.donations << @donation # test code
     end
 
     def edit

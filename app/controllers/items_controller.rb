@@ -11,16 +11,23 @@ class ItemsController < ApplicationController
         @item = Item.new  # Instantiating a new Item class
         @item.cart = current_cart # Append the @current_cart from the session to the item's belongs_to cart relationship
         @item.product = chosen_product
+        @item.historical_price = chosen_product.price # this is the new code
+        @item.historical_quantity = @item.quantity
       end
 
       @item.save
       redirect_to cart_path(current_cart)
     end
-    
+
     def destroy
         @item = Item.find(params[:id])
         @item.destroy
         redirect_to cart_path(@current_cart)
+      end
+      private
+
+      def item_params
+        params.require(:item).permit(:product_id, :cart_id, :order_id, :quantity)
       end
 
 end

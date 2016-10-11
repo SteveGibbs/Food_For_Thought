@@ -18,5 +18,8 @@
 
 class User < ActiveRecord::Base
   has_secure_password
+  has_many :food_orders
+  has_many :donations, :through => :food_orders
+
 
 end

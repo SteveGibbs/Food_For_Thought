@@ -1,6 +1,23 @@
 
 <h1><%= "User account for #{@user.first_name} #{@user.last_name}"%></h1>
 
+<%="Donations given:" %>
+<% @user.donations.each do |donation| %>
+
+<br>
+<%=donation.created_at.strftime("%d %b %y") + " - "%>
+<%= donation.donation_name%>
+<%= donation.quantity%>
+
+
+
+<%end%>
+
+<br>
+
+
+
+
 <%if @current_user && @current_user.id == @user.id %>
 <div class="controls">
     <%= link_to "Edit", edit_user_path(@user.id) %>

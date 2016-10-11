@@ -9,15 +9,34 @@ class OrdersController < ApplicationController
   end
 
   def create
+
     @order = Order.new(order_params)
     @current_cart.items each do |item|
       @order.items << item
+      # @order.items = @current_cart.items #new code
     end
 
     @order.save
     session[:order_id] = @order.id if @order.save
     redirect_to orders_path
   end
+
+  # chosen_donation = Donation.find(params[:donation_id])
+  # @food_order = FoodOrder.new
+  # @food_order.donation_id = chosen_donation.id
+  # @food_order.user_id = @current_user.id
+  # @food_order.pickup = Time.now
+  # if @food_order.save
+  #   redirect_to user_path(@current_user)
+  # else
+  #   redirect_to :back
+  # end
+
+
+
+
+
+
 
   def edit
     @order = Order.find(params[:id])

@@ -21,7 +21,6 @@
 <%= item.quantity %>
 <br>
 <br>
+<%= button_to "Donate", food_orders_path, method: "post", class: 'case3', params: {donation_id: item.id} %>
 </div>
 <%end%>
-
-<%= button_to "Donate", food_orders_path(:user_id => food_order.id), class: 'case3' %>

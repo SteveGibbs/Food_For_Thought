@@ -24,7 +24,10 @@
         <%= link_to "Empty cart", cart_path(@cart), method: :delete, data: {confirm: "Are you sure you want to empty your cart?"} %>
 
       <%= link_to "Checkout", new_order_path %>
+      <%#= link_to "Checkout", orders_path, method: "post"  %>
+      <%#= link_to "Checkout", orders_path, method: "post", params: {order_id: item.id} %>
 
+<%#= button_to "Donate", food_orders_path, method: "post", class: 'case3', params: {donation_id: item.id} %>
 
         <% end %>
 

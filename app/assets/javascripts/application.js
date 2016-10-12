@@ -20,10 +20,14 @@
 
 //LOGIC FOR AJAX QUERY FOR ORDER TOTAL
 
+// NOTE
+// Create a global variable here, which is an array, which you can push objects to from your nested for loop
+// var thingsForChart = [];
+
 
 var orderDisplay = function(data) {
   console.log(data);
-  console.log("test");
+  console.log("what am I testing");
 
   // Data is visible here: http://localhost:3000/orders.json
   // An array of objects
@@ -52,12 +56,18 @@ var orderDisplay = function(data) {
       var quantity = data[i].items[j].quantity;
       var orderID = data[i].items[j].order_id;
       var total = quantity * price;
+      // just want var total and to feed this as global variable value into chart.js
+      // NOTE
+      // thingsForChart.push({productName: total});
       var $li4 = $("<li>").text("Purchased " + quantity + " of " + productName + " items @ price of $" + price + " for $" + total);
       $(".clear_display").append($li4);
     }
   }
+  if ($("#myChart").length > 0) {
+    var sale1 = total;
+    drawChart();
+  }};
 
-};
 console.log("hello world");
 var baseURL = "/orders";
 var getOrderDisplay = function() {
@@ -78,6 +88,11 @@ var sale1 = 5;
 var sale2 = 6;
 
 var drawChart = function(){
+  // NOTE
+  // var values = [];
+  // for (var prop in thingsForChart) {
+  //   values.push(thingsForChart[prop]);
+  // }
   var ctx = document.getElementById("myChart");
   var myChart = new Chart(ctx, {
       type: 'bar',
@@ -85,6 +100,7 @@ var drawChart = function(){
           labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
           datasets: [{
               label: 'Current Orders',
+              // data: values,
               data: [sale1, sale2, 3, 5, 2, 3],
               backgroundColor: [
                   'rgba(255, 99, 132, 0.2)',
@@ -122,8 +138,10 @@ var drawChart = function(){
 
 
 $(document).on("turbolinks:load", function() {
-  drawChart();
-
+  // if ($("#myChart").length > 0) {
+  //   drawChart();
+  // }
+  //
   console.log("test again");
   var myTimer;
     var orderTimer = function() {
@@ -139,11 +157,7 @@ $(document).on("turbolinks:load", function() {
     $("#stop_live_orders").on("click", function() {
       console.log("testing once again");
       window.clearInterval(myTimer);
-
     });
-
-
-
 
 // CAROUSEL SLIDER FROM SLICK
   $('.autoplay').slick({
@@ -152,17 +166,10 @@ $(document).on("turbolinks:load", function() {
     variableWidth: true,
     autoplay: true,
     autoplaySpeed: 3000
-
   });
 
-  // $('.single-item-rtl').slick({
-  //   rtl: true
-  // });
-  //
   $('.slick-prev').html('<');
   $('.slick-next').html('>');
-
-
 
 });
 

@@ -26,10 +26,9 @@
    height: 100%;
    width: 100%;
    font-family: "Lato";
-   margin: 0;
+   margin: 0 auto;
    padding: 0;
-   left: 0;
-   top: 0;
+
    font-size: 100%;
    background-color: lightslategray;
    text-align: center;
@@ -191,10 +190,12 @@ body.pages.index {
 }
 
 .slick-slide {
-text-align: center;
+margin: 0 auto;
   width: 400px;
-  max-width: 25%;
+  max-width: 75%;
+text-align: center;
 }
+
 
 img{
 height: 160px;
@@ -259,12 +260,14 @@ form.button_to, {
 }
 
 #map{
-   text-align: center !important;
+
+   margin: 0 auto;
    height: 50%;
    width: 50%;
 }
 
 #myChart {
+   margin: 0 auto;
    background-color: white;
    height: 70% !important;
    width: 70% !important;

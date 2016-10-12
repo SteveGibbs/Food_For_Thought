@@ -1,16 +1,30 @@
-<h1>Session New</h1>
+<h1>Login</h1>
 
 <%= form_tag login_path, :class => "login_form" do %>
-<p>
-    <br>
-    <br>
-    <%= label_tag :email %>
-    <%= email_field_tag :email, "", :required => true %>
-</p>
-<p>
-    <%= label_tag :password %>
-    <%= password_field_tag :password, "", :required => true %>
-</p>
 
-<%= submit_tag "Login", :class => "submit_format" %>
+<br>
+<br>
+<div class="row">
+    <div class="col-5 right">
+        <%= label_tag :email %>
+    </div>
+    <div class="col-3">
+        <%= email_field_tag :email, "", :required => true %>
+    </div>
+</div>
+<div class="row">
+
+    <div class="col-5 right">
+        <%= label_tag :password %>
+    </div>
+    <div class="col-3">
+        <%= password_field_tag :password, "", :required => true %>
+    </div>
+</div>
+<div class="row">
+    <div class="col-8 right">
+        <%= submit_tag "Login", :class => "submit_format" %>
+    </div>
+</div>
+
 <% end %>

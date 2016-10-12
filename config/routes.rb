@@ -24,7 +24,10 @@ Rails.application.routes.draw do
   get 'items/:id' => 'items#show', as: 'item'
   delete 'items/:id' => 'items#destroy', as: 'item_delete'
 
-  resources :products, :orders, :users, :donations, :food_orders
+  get 'pages/location'
+  get 'pages/stats'
+
+  resources :products, :orders, :users, :donations, :food_orders, :pages
 
   # get 'orders/index'
   #

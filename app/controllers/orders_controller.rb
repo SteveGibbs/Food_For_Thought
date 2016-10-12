@@ -9,15 +9,16 @@ class OrdersController < ApplicationController
   end
 
   def create
-
-    @order = Order.new(order_params)
-    @current_cart.items each do |item|
+    items = @current_cart.items
+    @order = Order.new
+    items.each do |item|
       @order.items << item
-      # @order.items = @current_cart.items #new code
+      item.cart_id = nil
     end
 
-    @order.save
-    session[:order_id] = @order.id if @order.save
+    if @order.save
+      session[:order_id] = @order.id
+    end
     redirect_to orders_path
   end
 

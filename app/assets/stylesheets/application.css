@@ -218,6 +218,10 @@ display: inline-block;
    width: 60px;
    background-color: #e3a797;
 }
+.case3a{
+   width: 120px;
+   background-color: #e3a797;
+}
 
 .case4{
    width: 250px;
@@ -250,4 +254,10 @@ a:hover {
 }
 form.button_to, {
   text-align: center;
+}
+
+#map{
+
+   height: 50%;
+   width: 50%;
 }

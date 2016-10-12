@@ -229,6 +229,8 @@ display: inline-block;
    text-align: left;
 
 }
+
+
 input, textarea {
    border-radius: 6px;
    text-align: center;
@@ -257,7 +259,13 @@ form.button_to, {
 }
 
 #map{
-
+   text-align: center !important;
    height: 50%;
    width: 50%;
+}
+
+#myChart {
+   background-color: white;
+   height: 70% !important;
+   width: 70% !important;
 }

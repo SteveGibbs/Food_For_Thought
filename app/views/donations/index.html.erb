@@ -1,9 +1,5 @@
-<h1>Donations#index</h1>
-<p>Find me in app/views/donations/index.html.erb</p>
-
-
-
-
+<h1>Food Donations</h1>
+<p>Please Login as a Registered Donor to Donate</p>
 
 
 
@@ -21,6 +17,9 @@
 <%= item.quantity %>
 <br>
 <br>
+
+<% if @current_user.present? %>
 <%= button_to "Donate", food_orders_path, method: "post", class: 'case3', params: {donation_id: item.id} %>
+<%end%>
 </div>
 <%end%>

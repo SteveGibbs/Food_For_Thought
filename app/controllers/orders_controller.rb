@@ -1,6 +1,12 @@
 class OrdersController < ApplicationController
   def index
     @orders = Order.all
+
+    respond_to do |f|
+      f.html {}
+      f.json { render json: @orders.to_json(include: { items: { include: :product } }) }
+    end
+
   end
 
   def new

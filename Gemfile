@@ -46,16 +46,13 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+end
 
-  group :production do
-    gem 'rails_12factor'
-  end
+group :production do
+  gem 'rails_12factor'
+end
 
   ## Gemfile for Rails 3+, Sinatra, and Merb
-  gem 'will_paginate', '~> 3.1.0'
+gem 'will_paginate', '~> 3.1.0'
 
 gem 'chart-js-rails'
-
-
-
-end

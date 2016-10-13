@@ -20,8 +20,8 @@
   **/
 
   body.pages.index {
-     background-image: image-url("potato.jpg");
-
+    //  background-image: image-url("potato.jpg");
+     background-image: image-url("wheat.jpg");
      background-size: cover;
   }
 
@@ -190,24 +190,36 @@
  }
 
 .slick-slider {
-   width: 430px;
-   height: 220px;
+   width: 800px;
+   height: 267px;
    margin: 0 auto;
 }
 
 .slick-slide {
 margin: 0 auto;
-  width: 430px;
+  height: 267px;
+  width: 400px;
   max-width: 75%;
 text-align: center;
 }
 
+.testing {
+  color: white;
+  background-color: red !important;
+}
 
 img{
 height: 160px;
 border-radius: 5px;
 }
 
+.prod1:hover {
+  transform: scale(1.1);
+}
+.prod2:hover {
+  transform: scale(1.5);
+
+}
 .case1 {
 
 text-align: center;
@@ -259,9 +271,10 @@ p, li {
 }
 
 a {
+
   color: #2C3539;
   padding: 30px;
-  text-align: justify;
+    text-align: justify;
 }
 a:hover {
   color: #e3a797;

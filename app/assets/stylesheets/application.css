@@ -189,9 +189,14 @@ body.pages.index {
    background-size: cover;
 }
 
+.slick-slider {
+   width: 420px;
+   margin: 0 auto;
+}
+
 .slick-slide {
 margin: 0 auto;
-  width: 400px;
+  width: 420px;
   max-width: 75%;
 text-align: center;
 }

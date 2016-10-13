@@ -16,29 +16,22 @@
 //= require_tree .
 
 
-
-
 //LOGIC FOR AJAX QUERY FOR ORDER TOTAL
 
 // NOTE
 // Create a global variable here, which is an array, which you can push objects to from your nested for loop
-// var thingsForChart = [];
-
+var chartData;
 
 var orderDisplay = function(data) {
-  console.log(data);
-  console.log("what am I testing");
 
   // Data is visible here: http://localhost:3000/orders.json
   // An array of objects
   $(".clear_display").empty();
 
-
   for (var i = 0; i < data.length; i++) {
     var name = data[i].name;
     var address1 = data[i].address1;
     var status = data[i].status;
-
     var orderID2 = data[i].items[0].order_id;
     var $li5 = $("<li>").text("Order id:" + orderID2);
     var $li8 = $("<br>").text("");
@@ -58,15 +51,14 @@ var orderDisplay = function(data) {
       var total = quantity * price;
       // just want var total and to feed this as global variable value into chart.js
       // NOTE
+      chartData.push(total);
       // thingsForChart.push({productName: total});
-      var $li4 = $("<li>").text("Purchased " + quantity + " of " + productName + " items @ price of $" + price + " for $" + total);
+      var $li4 = $("<li>").text("Purchased " + quantity + " of " + productName + " items @ price of $" + price + " for total of $" + total);
       $(".clear_display").append($li4);
     }
   }
-  if ($("#myChart").length > 0) {
-    var sale1 = total;
-    drawChart();
-  }};
+  test();
+};
 
 console.log("hello world");
 var baseURL = "/orders";
@@ -79,15 +71,22 @@ var getOrderDisplay = function() {
   }).done(orderDisplay);
 };
 
+var test = function(){
+  var saleTotal = chartData.reduce(function (a, b) {
+      return a + b;
 
-
+  });
+  if ($("#myChart").length > 0) {
+    drawChart( saleTotal );
+  }
+};
 
 
 // LOGIC FOR DISPLAYING CHART FROM CHART.JS - FEED IN DATA VIA AJAX QUERY
-var sale1 = 5;
-var sale2 = 6;
+var budgetedSales = 1000;
 
-var drawChart = function(){
+
+var drawChart = function( saleTotal ){
   // NOTE
   // var values = [];
   // for (var prop in thingsForChart) {
@@ -97,11 +96,11 @@ var drawChart = function(){
   var myChart = new Chart(ctx, {
       type: 'bar',
       data: {
-          labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+          labels: ["Budget", "Orders", "Monthly", "Green", "Purple", "Orange"],
           datasets: [{
               label: 'Current Orders',
               // data: values,
-              data: [sale1, sale2, 3, 5, 2, 3],
+              data: [budgetedSales, saleTotal],
               backgroundColor: [
                   'rgba(255, 99, 132, 0.2)',
                   'rgba(54, 162, 235, 0.2)',
@@ -138,6 +137,11 @@ var drawChart = function(){
 
 
 $(document).on("turbolinks:load", function() {
+  chartData = [];
+  mapInit = false;
+  if ( $("#map").length !== 0 ) {
+    initMap();
+  }
   // if ($("#myChart").length > 0) {
   //   drawChart();
   // }
@@ -161,7 +165,7 @@ $(document).on("turbolinks:load", function() {
 
 // CAROUSEL SLIDER FROM SLICK
   $('.autoplay').slick({
-    slidesToShow: 3,
+    slidesToShow: 2,
     slidesToScroll: 1,
     variableWidth: true,
     autoplay: true,
@@ -175,7 +179,9 @@ $(document).on("turbolinks:load", function() {
 
 // LOGIC FOR DISPLAYING LOCATION MAP USING GOOGLE API - SIMPLE MAP
 var map;
+var mapInit = false;
 function initMap() {
+  if ( mapInit || $("#map").length === 0 ) { return false; }
 
    var myLatLng = {lat: -33.9092452, lng: 151.1944616};
 
@@ -189,4 +195,5 @@ function initMap() {
           map: map,
           title: ''
         });
+  mapInit = true;
 }

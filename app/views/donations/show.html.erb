@@ -1,5 +1,5 @@
-<h1>Donations#show</h1>
-<p>Find me in app/views/donations/show.html.erb</p>
+<h1>Donation</h1>
+
 
 
 <%=@donation.donation_name%>
@@ -14,6 +14,7 @@
 <br>
 <%=@donation.quantity%>
 
-
+<br>
+<br>
 <%= link_to("Edit", edit_donation_path(@donation)) %>
 <%= link_to("Delete", donation_path(@donation),method: :delete, data: {confirm: "Are you sure?"}) %>

@@ -1,46 +1,46 @@
 
 <%=form_for @donation do |f| %>
 <div class="row">
-<div class="col-3 left">
+<div class="col-5 right">
 <span>Donation Name</span>
 </div>
-<div class="col-9 left" >
+<div class="col-7 left" >
 <%= f.text_field :donation_name, :required => true %>
 </div>
 </div>
 <div class="row">
-<div class="col-3 left">
+<div class="col-5 right">
     <span>Donation Description 1</span>
     </div>
-    <div class="col-9 left" >
+    <div class="col-7 left" >
     <%= f.text_field :donation_desc1, :required => true %>
 </div>
 </div>
 <div class="row">
-<div class="col-3 left">
+<div class="col-5 right">
     <span>Donation Description 2</span>
     </div>
-    <div class="col-9 left" >
+    <div class="col-7 left" >
 <%= f.text_field :donation_desc2, :required => true %>
 </div>
 </div>
 <div class="row">
-<div class="col-3 left">
+<div class="col-5 right">
     <span>Quantity (in kgs)</span>
     </div>
-    <div class="col-9 left" >
+    <div class="col-7 left" >
 <%= f.number_field :quantity, :required => true %>
 </div>
 </div>
 <div class="row">
-<div class="col-3 left">
+<div class="col-5 right">
     <span>Image</span>
     </div>
-    <div class="col-9 left" >
+    <div class="col-7 left" >
 <%= f.text_field :image %>
 </div>
 </div>
 
 <br>
-        <%= f.submit "Submit", :class=> "submit_format"%>
+        <%= f.submit "Submit", :class=> "case3a"%>
         <% end %>

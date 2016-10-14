@@ -7,13 +7,13 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 Donation.destroy_all
-d1 = Donation.create donation_name: 'fresh and canned food', quantity: 10, donation_desc1: 'A mixed combination of fresh fruit and vegetables, meat and seafood, and canned items', image: 'assortedfoodproducts.jpg'
+d1 = Donation.create donation_name: 'fresh and canned food', quantity: 10, donation_desc1: 'A mixed combination of fresh fruit and vegetables, meat and seafood, and canned items. Weight in kgs', image: 'assortedfoodproducts.jpg'
 
-d2 = Donation.create donation_name: 'mixed fruit only', quantity: 20, donation_desc1: 'Assorted combination of fresh fruit', image: 'freshmixedfruit.jpg'
+d2 = Donation.create donation_name: 'mixed fruit only', quantity: 20, donation_desc1: 'Assorted combination of fresh fruit. Weight in kgs', image: 'freshmixedfruit.jpg'
 
-d3 = Donation.create donation_name: 'mixed fruit and vegetables', quantity: 20, donation_desc1: 'A mixed combination of fresh fruit and vegetables, meat and seafood, and canned items', image: 'donut-tshirt.jpg'
+d3 = Donation.create donation_name: 'mixed fruit and vegetables', quantity: 20, donation_desc1: 'A mixed combination of fresh fruit and vegetables, meat and seafood, and canned items.  Weight in kgs', image: 'mixedvegetables.jpg'
 
-d4 = Donation.create donation_name: 'mixed food', quantity: 30, donation_desc1: 'A mixed combination of fresh fruit and vegetables, meat and seafood, and canned items', image: 'potato.jpg'
+d4 = Donation.create donation_name: 'mixed food', quantity: 30, donation_desc1: 'A mixed combination of fresh fruit and vegetables, meat and seafood, and canned items. Weight in kgs', image: 'potato.jpg'
 
 
 

@@ -87,11 +87,7 @@ var budgetedSales = 1000;
 
 
 var drawChart = function( saleTotal ){
-  // NOTE
-  // var values = [];
-  // for (var prop in thingsForChart) {
-  //   values.push(thingsForChart[prop]);
-  // }
+
   var ctx = document.getElementById("myChart");
   var myChart = new Chart(ctx, {
       type: 'bar',
@@ -142,10 +138,7 @@ $(document).on("turbolinks:load", function() {
   if ( $("#map").length !== 0 ) {
     initMap();
   }
-  // if ($("#myChart").length > 0) {
-  //   drawChart();
-  // }
-  //
+
   console.log("test again");
   var myTimer;
     var orderTimer = function() {

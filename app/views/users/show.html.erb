@@ -1,7 +1,8 @@
 
-<h1><%= "User account for #{@user.first_name} #{@user.last_name}"%></h1>
+<h1><%= "My account: #{@user.first_name} #{@user.last_name}"%></h1>
 
 <%="Donations given:" %>
+<br>
 <% @user.donations.each do |donation| %>
 
 <br>
@@ -16,7 +17,8 @@
 <br>
 
 
-
+<br>
+<br>
 
 <%if @current_user && @current_user.id == @user.id %>
 <div class="controls">

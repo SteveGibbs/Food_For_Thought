@@ -204,12 +204,17 @@ text-align: center;
 }
 
 .testing {
-  color: white;
-  background-color: red !important;
+  color: #2C3539;
+  background-color: white;
+  height: 100px;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 20px;
+  margin-top: 80px;
 }
 
 img{
-height: 160px;
+height: 180px;
 border-radius: 5px;
 }
 
@@ -269,12 +274,17 @@ span {
 p, li {
    list-style-type: none;
 }
+nav {
+
+  height: 60px;
+}
 
 a {
-
+  top: 20px;
   color: #2C3539;
   padding: 30px;
-    text-align: justify;
+  text-align: justify;
+
 }
 a:hover {
   color: #e3a797;

@@ -3,16 +3,26 @@
 
 <% @products.each do |item| %>
 <div class="case1">
-<%= link_to image_tag(item.image, :class => "prod1"), product_path(item) %>
-<br>
+  <div class="row">
+    <%= link_to image_tag(item.image, :class => "prod1"), product_path(item) %>
+  </div>
+
+<div class="row">
 <br>
 <%= item.product_name %>
 <br>
 <br>
-<%= item.product_desc1 %>
+</div>
+<div class="row">
+  <div class="case8">
+
+
+  <%= item.product_desc1 %>
+    </div>
+</div>
+
 <br>
-<br>
-<%= item.price %>
+<%= number_to_currency(item.price) %>
 <br>
 <br>
 <%= button_to "Buy", items_path(:product_id => item.id), class: 'case3' %>

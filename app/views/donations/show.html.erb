@@ -16,5 +16,12 @@
 
 <br>
 <br>
+<% if @current_user.present?%>
+<% if @current_user.admin.to_s == "true"  %>
+<!--why is there an error if not logged in  -->
 <%= link_to("Edit", edit_donation_path(@donation)) %>
 <%= link_to("Delete", donation_path(@donation),method: :delete, data: {confirm: "Are you sure?"}) %>
+<%else%>
+<%""%>
+<%end%>
+<%end%>

@@ -7,20 +7,21 @@
 <% if @cart.items.length > 0  %>
   <% @cart.items.each do |item| %>
   <ul>
-    <div class="case2">
+
       <li>Product: <%= item.product.product_name %></li>
       <li>Price: <%=number_to_currency(item.product.price)%></li>
       <li>Quantity: <%= item.quantity %></li>
       <li>Product ID: <%= item.product_id %></li>
+
+</ul>
       <!--note there is no order id as order has not been created yet - just items in a shopping cart  -->
       <!-- <li>Historical Price <%=item.historical_price %></li>
       <li>Historical Quantity <%=item.historical_quantity %></li> -->
-
-
-      </div>
         <% end %>
+<ul>
         <p>Total to Pay:
             <%= number_to_currency(@cart.subtotal) %></p>
+        </ul>        
 <br>
 <%= button_to "Continue Shopping", products_path, method: :get, class: 'case3a' %>
 

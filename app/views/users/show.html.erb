@@ -6,17 +6,14 @@
 <% @user.donations.each do |donation| %>
 
 <br>
-<%=donation.created_at.strftime("%d %b %y") + " - "%>
-<%= donation.donation_name%>
+<%=donation.created_at.strftime("%d %b %y")%>
+<%=donation.donation_name%>
 <%= donation.quantity%>
-
-
+<%= link_to "Edit Donation", edit_donation_path(donation.id)%>
 
 <%end%>
 
 <br>
-
-
 <br>
 <br>
 

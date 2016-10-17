@@ -52,7 +52,6 @@ var orderDisplay = function(data) {
       // just want var total and to feed this as global variable value into chart.js
       // NOTE
       chartData.push(total);
-      // thingsForChart.push({productName: total});
       var $li4 = $("<li>").text("Purchased " + quantity + " of " + productName + " items @ price of $" + price + " for total of $" + total);
       $(".clear_display").append($li4);
     }
@@ -185,6 +184,7 @@ function initMap() {
 
   var marker = new google.maps.Marker({
           position: myLatLng,
+          label: "!",
           map: map,
           title: ''
         });

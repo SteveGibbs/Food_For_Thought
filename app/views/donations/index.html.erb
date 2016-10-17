@@ -5,13 +5,21 @@
 
 <% @donations.each do |item| %>
 <div class="case1">
-<%= link_to image_tag(item.image), donation_path(item) %>
+  <div class="row">
+    <%= link_to image_tag(item.image), donation_path(item) %>
+  </div>
+
 <br>
-<br>
-<%= item.donation_name %>
-<br>
-<br>
+
+<div class="row">
+  <div class="case8">
+      <%= item.donation_name %>
+  </div>
+
+</div>
+  <div class="case8">
 <%= item.donation_desc1 %>
+  </div>
 <br>
 <br>
 <%= item.quantity %>

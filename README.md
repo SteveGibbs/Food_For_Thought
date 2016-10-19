@@ -26,6 +26,12 @@ Project designed and deployed within four days as part of General Assembly's Web
 3. Edit donor and product catalogues and customer orders
 4. Admin login and authorization
 
+#### Contact Us page
+
+- google map
+
+#### Mobile responsive
+
 ## User instructions
 #### Admin login details:
 - Email: johndoe@gmail.com
@@ -34,13 +40,6 @@ Project designed and deployed within four days as part of General Assembly's Web
 #### Food Donor login:
 - Email: janedoe@gmail.com
 - Password: chicken
-
-#### Contact Us page
-
-- google map
-
-#### Mobile responsive
-
 ## Technology stack
 - [Ruby on Rails](http://guides.rubyonrails.org/) and [PostgreSQL](https://www.postgresql.org/) for back-end build and database
 - [Chart.js for Rails](http://www.chartjs.org) for charts

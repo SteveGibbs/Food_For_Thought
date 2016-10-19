@@ -4,7 +4,7 @@
 ## Description
 A relatively full featured charity website requiring corporate donor login to donate excess food items to charity, gift shop (not requiring login access) with shopping cart functionality, live sales reporting (for admin) with charts and potential to be built out for inventory management.
 
-Project designed and deployed within four days as part of General Assembly's Web Development Immersive bootcamp (week 12 project week).
+Project designed and deployed within four days as part of General Assembly's Web Development Immersive bootcamp (week 12 project week).  The website is non-commercial and purely for educational purposes only.  
 
 ## Designed by
 [Steve Gibbs](https://github.com/SteveGibbs)
@@ -40,6 +40,7 @@ Project designed and deployed within four days as part of General Assembly's Web
 #### Food Donor login:
 - Email: janedoe@gmail.com
 - Password: chicken
+
 ## Technology stack
 - [Ruby on Rails](http://guides.rubyonrails.org/) and [PostgreSQL](https://www.postgresql.org/) for back-end build and database
 - [Chart.js for Rails](http://www.chartjs.org) for charts

@@ -57,4 +57,4 @@ Project designed and deployed within four days as part of General Assembly's Web
 ## New features under consideration
 - **Inventory tracking**
 - **Build out sales reporting**
-- **Payment and mailer functionality (was incorporated in the MGK Shopping Project so less of the above)
+- **Payment and mailer functionality (was incorporated in the MGK Shopping Project so a lower priority to the above)**

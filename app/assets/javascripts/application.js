@@ -157,7 +157,7 @@ $(document).on("turbolinks:load", function() {
 
 // CAROUSEL SLIDER FROM SLICK
   $('.autoplay').slick({
-    slidesToShow: 2,
+    slidesToShow: 4,
     slidesToScroll: 1,
     variableWidth: true,
     autoplay: true,

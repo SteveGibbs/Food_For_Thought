@@ -24,6 +24,7 @@
      background-size: cover;
   }
 
+
  /* UNIVERSAL */
 
  html, body {
@@ -188,16 +189,14 @@
  }
 
 .slick-slider {
-   width: 800px;
-   height: 267px;
-   margin: 0 auto;
+max-width: 472px;
+margin: 0 auto;
 }
 
 .slick-slide {
   margin: 0 auto;
-  height: 267px;
-  width: 400px;
-  max-width: 75%;
+  width: 236px;
+  max-width: 472px;
   text-align: center;
 }
 
@@ -246,7 +245,7 @@ img{
 }
 
 .case4{
-   
+
    font-size: 12px;
 
 
@@ -306,4 +305,27 @@ form.button_to, {
    background-color: white;
    height: 70% !important;
    width: 70% !important;
+}
+
+@media only screen and (max-width: 800px) {
+  .testing {
+    color: #2C3539;
+    background-color: white;
+    height: 360px;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 20px;
+    margin-top: 80px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .testing {
+    color: #2C3539;
+    background-color: white;
+    height: 200px;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 20px;
+    margin-top: 80px;
+  }
 }

@@ -306,6 +306,17 @@ form.button_to, {
    height: 70% !important;
    width: 70% !important;
 }
+@media only screen and (max-width: 1024px) {
+  .testing {
+    color: #2C3539;
+    background-color: white;
+    height: 200px;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 20px;
+    margin-top: 80px;
+  }
+}
 
 @media only screen and (max-width: 800px) {
   .testing {
@@ -317,15 +328,8 @@ form.button_to, {
     border-radius: 20px;
     margin-top: 80px;
   }
-}
-@media only screen and (max-width: 1024px) {
-  .testing {
-    color: #2C3539;
-    background-color: white;
-    height: 200px;
-    width: 80%;
-    margin: 0 auto;
-    border-radius: 20px;
-    margin-top: 80px;
+
+  .slick-slider {
+    max-width: 236px;
   }
 }

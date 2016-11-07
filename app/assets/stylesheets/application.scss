@@ -20,7 +20,7 @@
   **/
 
   body.pages.index {
-     background-image: image-url("wheat.jpg");
+     background-image: image-url("wheat3.jpg");
      background-size: cover;
   }
 
@@ -189,7 +189,7 @@
  }
 
 .slick-slider {
-max-width: 472px;
+max-width: 944px;
 margin: 0 auto;
 }
 
@@ -315,6 +315,10 @@ form.button_to, {
     margin: 0 auto;
     border-radius: 20px;
     margin-top: 80px;
+  }
+
+  .slick-slider {
+    max-width: 572px;
   }
 }
 

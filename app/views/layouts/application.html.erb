@@ -29,9 +29,18 @@
                 <% if @current_user.present?%>
                 <% if @current_user.admin.to_s == "true"  %>
                 <!--why is there an error if not logged in  -->
-                <%= link_to("Users", users_path)%>
-                <%= link_to("Reports", pages_stats_path)%>
-                <%= link_to("Orders", orders_path)%>
+                    <div class="dropdown">
+  <button class="dropbtn">Admin</button>
+  <div class="dropdown-content">
+    <a href="../users">Users</a>
+    <a href="../pages/stats">Reports</a>
+    <a href="../orders">Orders</a>
+  </div>
+</div>
+
+                <%#= link_to("Users", users_path)%>
+                <%#= link_to("Reports", pages_stats_path)%>
+                <%#= link_to("Orders", orders_path)%>
                 <%else%>
                 <%""%>
                 <%end%>
@@ -64,7 +73,7 @@
 
         <footer>
 
-            
+
             <p>Food for Thought was inspired by efforts around the world to reduce food wastage and in particular in Australia by OzHarvest.</p>
         </footer>
 

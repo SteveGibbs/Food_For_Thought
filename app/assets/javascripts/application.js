@@ -190,3 +190,15 @@ function initMap() {
         });
   mapInit = true;
 }
+
+// ADD OR REMOVE CLASS TO NAV BAR TO MAKE IT MOBILE RESPONSIVE
+
+function navBarFunction() {
+    var navigationBar = document.getElementById("myNavBar");
+    if (navigationBar.className === "navBar") {
+        navigationBar.className += " responsive";
+    } else {
+        navigationBar.className = "navBar";
+    }
+
+}

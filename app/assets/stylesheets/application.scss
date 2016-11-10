@@ -245,10 +245,7 @@ img{
 }
 
 .case4{
-
    font-size: 12px;
-
-
 }
 
 .case6{
@@ -260,6 +257,7 @@ img{
 .case8{
   height: 40px;
 }
+
 input, textarea {
    border-radius: 6px;
    text-align: center;
@@ -274,14 +272,16 @@ span {
 p, li {
    list-style-type: none;
 }
-nav {
 
-  height: 60px;
+nav {
+  height: 80px;
 }
 
 a {
   top: 20px;
-  color: #2C3539;
+  font-size: 16px;
+  color: blue;
+  // color: #2C3539;
   padding: 30px;
   text-align: justify;
 
@@ -416,4 +416,60 @@ div.col-7.right {
   font-size: 16px;
   background-color: yellow;
   border-radius: 10px;
+}
+
+
+ul.navBar li {float: left;}
+
+ul.navBar li a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 16px;
+  }
+
+  ul.navBar li a:hover {
+    color: #e3a797;
+  }
+
+ul.navBar li.icon {display: none;}
+
+@media screen and (max-width:680px) {
+  ul.navBar li:not(:first-child) {display: none;}
+  ul.navBar li.icon {
+  float: right;
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width:680px) {
+  ul.navBar.responsive {position: relative;}
+  ul.navBar.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.navBar.responsive li {
+    float: none;
+    display: inline;
+    max-width: 100px;
+    background-color: white;
+  }
+  ul.navBar.responsive li a {
+    display: block;
+    text-align: left;
+    max-width: 100px;
+    background-color: white;
+  }
+}
+
+h1 {
+  text-align: center !important;
+}
+
+.stylenav {
+  float: right;
 }

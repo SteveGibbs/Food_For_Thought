@@ -280,11 +280,10 @@ nav {
 a {
   top: 20px;
   font-size: 16px;
+  font-family: "Luckiest Guy";
   color: blue;
-  // color: #2C3539;
   padding: 30px;
   text-align: justify;
-
 }
 a:hover {
   color: #e3a797;
@@ -294,7 +293,6 @@ form.button_to, {
 }
 
 #map{
-
    margin: 0 auto;
    height: 50%;
    width: 50%;
@@ -364,18 +362,14 @@ div.col-7.right {
     border-radius: 20px;
     margin-top: 80px;
   }
-
   input, textarea {
      border-radius: 6px;
      text-align: center;
      width: 160px;
-
   }
-
   div.col-3, div.col-5.right, div.col-7.left {
     width: 100px;
   }
-
   .slick-slider {
     max-width: 236px;
   }
@@ -384,7 +378,6 @@ div.col-7.right {
 .dropdown {
     position: relative;
     display: inline-block;
-
 }
 
 .dropdown-content {
@@ -402,7 +395,9 @@ div.col-7.right {
     display: block;
 }
 
-.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
 
 .dropdown:hover .dropdown-content {
     display: block;
@@ -412,7 +407,7 @@ div.col-7.right {
     background-color: #3e8e41;
 }
 .dropbtn {
-  font-family: "Lato";
+  font-family: "Luckiest Guy";
   font-size: 16px;
   background-color: yellow;
   border-radius: 10px;
@@ -428,6 +423,7 @@ ul.navBar li a {
     padding: 14px 16px;
     text-decoration: none;
     transition: 0.3s;
+    font-family: "Luckiest Guy";
     font-size: 16px;
   }
 
@@ -460,19 +456,14 @@ ul#myNavBar {
     float: none;
     display: inline;
     max-width: 100px;
-    background-color: white;
   }
   ul.navBar.responsive li a {
     display: block;
     text-align: left;
     max-width: 100px;
-    background-color: white;
   }
 }
 
-h1 {
-  text-align: center !important;
-}
 
 .stylenav {
   float: right;

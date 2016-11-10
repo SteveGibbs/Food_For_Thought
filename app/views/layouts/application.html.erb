@@ -25,9 +25,9 @@
             <% unless @current_user.present? %>
             <%= link_to("Login", login_path()) %>
             <%else %>
-            You are logged in as
+            Logged in as
             <%= ("#{@current_user.first_name} #{@current_user.last_name}") %>
-            <%= link_to("Edit your profile", edit_user_path(@current_user.id)) %>
+            <%= link_to("Edit Profile", edit_user_path(@current_user.id)) %>
             <%= link_to("Log out #{@current_user.first_name} #{@current_user.last_name}", logout_path(), :method => :delete) %>
 
             <% end %>

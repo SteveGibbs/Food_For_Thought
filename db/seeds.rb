@@ -15,10 +15,10 @@ d5 = Donation.create donation_name: 'fresh and canned food', quantity: 20, donat
 d6 = Donation.create donation_name: 'mixed fruit only', quantity: 20, donation_desc1: 'Assorted combination of fresh fruit. Weight in kgs', image: 'mixedfruit2.jpg'
 d7 = Donation.create donation_name: 'mixed fruit and vegetables', quantity: 20, donation_desc1: 'A mixed combination of fresh fruit and vegetables.  Weight in kgs', image: 'mixedfruitveg.jpg'
 d8 = Donation.create donation_name: 'mixed food', quantity: 20, donation_desc1: 'A mixed combination of predominatly canned items with assorted fresh food. Weight in kgs', image: 'shabufood.jpg'
-d9 = Donation.create donation_name: 'fresh and canned food', quantity: 30, donation_desc1: 'A mixed combination of fresh fruit and vegetables, meat and seafood, and canned items. Weight in kgs', image: 'assortedfoodproducts.jpg'
-d10 = Donation.create donation_name: 'mixed fruit only', quantity: 30, donation_desc1: 'Assorted combination of fresh fruit. Weight in kgs', image: 'freshmixedfruit.jpg'
-d11 = Donation.create donation_name: 'mixed fruit and vegetables', quantity: 30, donation_desc1: 'A mixed combination of fresh fruit and vegetables.  Weight in kgs', image: 'mixedvegetables.jpg'
-d12 = Donation.create donation_name: 'mixed food', quantity: 30, donation_desc1: 'A mixed combination of predominatly canned items with assorted fresh food. Weight in kgs', image: 'potato.jpg'
+d9 = Donation.create donation_name: 'fresh and canned food', quantity: 30, donation_desc1: 'A mixed combination of fresh fruit and vegetables, meat and seafood, and canned items. Weight in kgs', image: 'canned-food2.jpg'
+d10 = Donation.create donation_name: 'mixed fruit only', quantity: 30, donation_desc1: 'Assorted combination of fresh fruit. Weight in kgs', image: 'citrus-fruits.jpg'
+d11 = Donation.create donation_name: 'mixed fruit and vegetables', quantity: 30, donation_desc1: 'A mixed combination of fresh fruit and vegetables.  Weight in kgs', image: 'broccoli.jpg'
+d12 = Donation.create donation_name: 'mixed food', quantity: 30, donation_desc1: 'A mixed combination of predominatly canned items with assorted fresh food. Weight in kgs', image: 'market.jpg'
 
 
 
